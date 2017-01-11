@@ -1,0 +1,6 @@
+Import('env')
+
+sources = SConscript('../src/SConscript', exports=['env'])
+sources += env.Object("test_a.c")
+test_a = env.Program(sources)
+Return('test_a')
